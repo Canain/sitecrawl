@@ -1,0 +1,354 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+    <!-- START from includeStandardHead.vm -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+
+    <!-- this causes problems for layout needs investigating -->
+    <link href="/portal/styles/portalstyles.css" type="text/css" rel="stylesheet" media="all" />
+    <!--[if gte IE 5]><![if lt IE 7]>
+        <link href="/portal/styles/portalstyles-ie5.css" type="text/css" rel="stylesheet" media="all" />
+    <![endif]><![endif]-->
+    <link href="/library/skin/gatech/portal.css" type="text/css" rel="stylesheet" media="all" />
+
+
+    <title>T-Square : My Workspace : Home</title>
+    <link href="/library/skin/tool_base.css" type="text/css" rel="stylesheet" media="all" />
+    <link href="/library/skin/gatech/tool.css" type="text/css" rel="stylesheet" media="all" />
+
+    <script type="text/javascript" language="JavaScript" src="/library/js/headscripts.js"></script>
+    <script type="text/javascript" language="JavaScript" src="/library/js/jquery.js"></script>
+
+    <script type="text/javascript" language="JavaScript" src="/portal/scripts/portalscripts.js"></script>
+
+    <script type="text/javascript" language="JavaScript">
+        setLoginStatus (true, "https://t-square.gatech.edu/portal", "https://login.gatech.edu/cas/logout", "c0136860-6abf-465e-9c81-1d0f3d4339b9", "75d4424aea18ee81423746b0a9918c51");
+        setTimeoutInfo (true, 600);
+        setUIToggleState (true, true, false);
+    </script>
+
+</head>
+<!-- END from includeStandardHead.vm -->
+<body class="portalBody">
+<script type="text/javascript" language="JavaScript">
+    var sakaiPortalWindow = "";
+</script>
+<!-- END Header -->
+<script type="text/javascript">
+    $(document).ready(function() {
+        var toggleClass=""
+        toggleClass="toggleTools"
+        $('#toggler').css({'display' : 'block'});
+        $('#toggler').addClass(toggleClass)
+
+        $('#toggleToolMenu').click(function(){
+            if ( $('#toggleNormal').is(':visible') ) {
+                sakaiRestoreNavigation();
+                document.cookie = "sakai_nav_minimized=false; path=/";
+            } else {
+                sakaiMinimizeNavigation();
+                document.cookie = "sakai_nav_minimized=true; path=/";
+            }
+        });
+    });
+</script>
+<!-- site.vm -->
+
+<!-- start includeSiteNav -->
+<div id="portalOuterContainer">
+    <div id="portalContainer"  >
+        <div id="skipNav">
+
+            <a href="#tocontent"  class="skip" title="jump to content" accesskey="c">
+                jump to content
+            </a>
+            <a href="#totoolmenu"  class="skip" title="jump to tools list" accesskey="l">
+                jump to tools list
+            </a>
+            <a href="#sitetabs" class="skip" title="jump to worksite list" accesskey="w">
+                jump to worksite list
+            </a>
+        </div>
+        <div id="headerMax">
+            <div id="siteNavWrapper" class="workspace">
+                <div id="mastHead">
+                    <div id="mastLogo">
+                        <img title="Logo" alt="Logo" src="/library/skin/gatech/images/logo_inst.gif" />
+                    </div>
+                    <div id="mastBanner">
+                        <img title="Banner" alt="Banner" src="/library/skin/gatech/images/banner_inst.gif" />
+                    </div>
+                    <!-- login component -->
+                    <div id="mastLogin">
+                        <div id="loginLinks">
+                            <a href="https://t-square.gatech.edu/portal/logout" title="Logout" id="loginLink1" >Logout</a>
+                        </div>
+                    </div>
+                    <!-- end login component -->
+                </div>
+            </div>
+
+            <!-- START from includeTabs.vm -->
+            <!-- start includeTabs -->
+            <div class="siteNavWrap workspace">
+                <div id="siteNav">
+                    <div id="linkNav">
+                        <a id="sitetabs" class="skip" name="sitetabs"></a>
+                        <h1 class="skip">Worksites begin here</h1>
+                        <ul id="siteLinkList">
+                            <li class="selectedTab"><a href="#"><span>My Workspace</span></a></li>
+                            <li><a href="https://t-square.gatech.edu/portal/site/gtc-8603-513f-59e2-86ed-64fd10a878e1" title="CS-2110"><span>CS-2110</span></a></li>
+                            <li><a href="https://t-square.gatech.edu/portal/site/gtc-878c-f073-5abc-a837-fc1051446535" title="CS-2340-A,GR"><span>CS-2340-A,GR</span></a></li>
+                            <li><a href="https://t-square.gatech.edu/portal/site/gtc-3d62-f0de-52de-8aec-e11a87b512fe" title="PHYS-2211-K,M,N"><span>PHYS-2211-K,M,N</span></a></li>
+                            <li><a href="https://t-square.gatech.edu/portal/site/gtc-71a5-b1d4-562b-a9b7-e8688ac1bb4a" title="PHYS-2211-N03"><span>PHYS-2211-N03</span></a></li>
+                            <li><a href="https://t-square.gatech.edu/portal/site/gtc-7fb4-a11e-5400-afa0-73ee2b759a03" title="CS-2050-A1,A2,B1,B2,B3,A3"><span>CS-2050-A1,A2,B1,B2,B3,A3</span></a></li>
+                        </ul>
+                    </div> <!-- /linkNav -->
+
+                </div>
+                <div class="divColor" id="tabBottom">
+                </div>
+
+
+                <div id="selectNav" style="display:none">
+                    <div>
+                        <span class="skip">To operate the combo box, first press Alt+Down Arrow to open it, and then use the up and down arrow keys to scroll through the options.</span>
+
+                        <div class="termContainer">
+                            <h4>SPRING 2015</h4>
+                            <ul>
+                                <li><a href="https://t-square.gatech.edu/portal/site/gtc-7fb4-a11e-5400-afa0-73ee2b759a03" title="CS-2050-A1,A2,B1,B2,B3,A3">
+                                    <span>CS-2050-A1,A2,B1,B2,B3,A3</span>
+                                </a></li>
+                                <li><a href="https://t-square.gatech.edu/portal/site/gtc-8603-513f-59e2-86ed-64fd10a878e1" title="CS-2110">
+                                    <span>CS-2110</span>
+                                </a></li>
+                                <li><a href="https://t-square.gatech.edu/portal/site/gtc-878c-f073-5abc-a837-fc1051446535" title="CS-2340-A,GR">
+                                    <span>CS-2340-A,GR</span>
+                                </a></li>
+                                <li><a href="https://t-square.gatech.edu/portal/site/gtc-3d62-f0de-52de-8aec-e11a87b512fe" title="PHYS-2211-K,M,N">
+                                    <span>PHYS-2211-K,M,N</span>
+                                </a></li>
+                                <li><a href="https://t-square.gatech.edu/portal/site/gtc-71a5-b1d4-562b-a9b7-e8688ac1bb4a" title="PHYS-2211-N03">
+                                    <span>PHYS-2211-N03</span>
+                                </a></li>
+                            </ul>
+                        </div> <!-- /termContainer -->
+                        <div class="termContainer">
+                            <h4>OTHER</h4>
+                            <ul>
+                                <li><a href="https://t-square.gatech.edu/portal/site/%7E75d4424aea18ee81423746b0a9918c51" title="My Workspace">
+                                    <span>My Workspace</span>
+                                </a></li>
+                            </ul>
+                        </div> <!-- /termContainer -->
+                        <div id="more_tabs_instr"><em>Hidden Sites</em> are not included in this menu. Access them in My Workspace -&gt; Worksite Setup.<br /> To hide a site, go to My Workspace -> Preferences -> Customize Tabs.</div>
+                    </div> <!-- /  -->
+                </div> <!-- /selectNav -->
+
+            </div> <!-- /tabsCssClass -->
+            <!-- end includeTabs -->
+            <!-- END from includeTabs.vm -->
+
+
+        </div>
+
+        <!-- START from includePageWithNav.vm -->
+        <div id="container" class="workspace" >
+
+            <!-- START from includePageNav.vm -->
+            <!-- start includePageNav -->
+            <div class="divColor" id="toolMenuWrap">
+                <div id="toggler">
+                    <a id="toggleToolMenu" onmouseup="blur()" href="#" title="Expand/Contract Navigation"><img id="toggleToolMax" src="/portal/styles/images/transMin.png" alt=
+                            "Expand/Contract Navigation"/><img id="toggleNormal" src="/portal/styles/images/transMin.png" alt="Expand/Contract Navigation" style="display:none"/></a>
+                </div>
+                <div id="worksiteLogo">
+                </div>
+                <a id="totoolmenu" class="skip" name="totoolmenu"></a>
+                <h1 class="skip">Tools begin here</h1>
+                <div id="toolMenu">
+                    <ul>
+                        <li class="selectedTool">
+                            <a class="icon-sakai-motd"><span>Home</span></a>
+                        </li>
+                        <li>
+                            <a class="icon-sakai-profile2 " href="https://t-square.gatech.edu/portal/site/%7E75d4424aea18ee81423746b0a9918c51/page/23ad4465-5e42-496a-a1ec-73573e298881" title="Edit your profile, post status updates, search for people with common interests, view their profile and add them as connections"><span>Profile</span></a>
+                        </li>
+                        <li>
+                            <a class="icon-sakai-membership " href="https://t-square.gatech.edu/portal/site/%7E75d4424aea18ee81423746b0a9918c51/page/ff707546-d0b2-40b5-989c-9b4eadd0d9d8" title="View and modify your membership in sites you may join"><span>Membership</span></a>
+                        </li>
+                        <li>
+                            <a class="icon-sakai-schedule " href="https://t-square.gatech.edu/portal/site/%7E75d4424aea18ee81423746b0a9918c51/page/5b2df12c-337c-4968-8199-30a987dab938" title="For posting and viewing deadlines, events, etc."><span>Schedule</span></a>
+                        </li>
+                        <li>
+                            <a class="icon-sakai-resources " href="https://t-square.gatech.edu/portal/site/%7E75d4424aea18ee81423746b0a9918c51/page/6646d04a-1876-41b2-8242-3db0b2c9331e" title="For posting documents, URLs to other websites, etc."><span>Resources</span></a>
+                        </li>
+                        <li>
+                            <a class="icon-sakai-announcements " href="https://t-square.gatech.edu/portal/site/%7E75d4424aea18ee81423746b0a9918c51/page/534898ef-95c5-4f8a-9b6c-10043293cdc7" title="For posting current, time-critical information"><span>Announcements</span></a>
+                        </li>
+                        <li>
+                            <a class="icon-sakai-sitesetup " href="https://t-square.gatech.edu/portal/site/%7E75d4424aea18ee81423746b0a9918c51/page/10be9ac0-1936-4eb1-a216-d08cba559649" title="Modify your sites and create new ones"><span>Worksite Setup</span></a>
+                        </li>
+                        <li>
+                            <a class="icon-sakai-preferences " href="https://t-square.gatech.edu/portal/site/%7E75d4424aea18ee81423746b0a9918c51/page/fcc96952-324c-4d9e-8b74-e6e178c22548" title="Tool to view and modify user's Preferences"><span>Preferences</span></a>
+                        </li>
+                        <li>
+                            <a class="icon-sakai-singleuser " href="https://t-square.gatech.edu/portal/site/%7E75d4424aea18ee81423746b0a9918c51/page/92620693-bc74-4961-bd23-2fa2f8bbe6ad" title="View and modify my user profile"><span>Account</span></a>
+                        </li>
+                        <li>
+                            <a  class="icon-sakai-help" accesskey="6" href="https://t-square.gatech.edu/portal/help/main" target="_blank"
+                                onclick="openWindow('https://t-square.gatech.edu/portal/help/main',
+									'Help', 'resizable=yes,toolbar=no,scrollbars=yes,menubar=yes,width=800,height=600'); 
+									return false" title="Help">
+                                <span>Help</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Add subsite lists -->
+            </div>
+            <a id="tocontent" class="skip" name="tocontent"></a>
+            <h1 class="skip">Content begins here</h1>
+            <!-- end includePageNav -->
+            <!-- end page nav -->
+            <!-- END from includePageNav.vm -->
+
+
+
+            <!-- START from includePageBody.vm -->
+            <div id="content">
+                <div id="col1of2">
+                    <!-- start Tool -->
+                    <div class="portletTitleWrap">
+                        <div class="portletTitle">
+                            <div class="title">
+                                <h2>Message Of The Day</h2>
+                            </div>
+                            <div class="action">
+                                <a href="https://t-square.gatech.edu/portal/help/main?help=sakai.announcements" title="Help for Message Of The Day"
+                                   target="_blank" onclick="openWindow('https://t-square.gatech.edu/portal/help/main?help=sakai.announcements', 'Help',
+								  'resizable=yes,toolbar=no,scrollbars=yes,menubar=yes,width=800,height=600'); return false">
+                                    <img src="/library/image/transparent.gif"  alt="Help for Message Of The Day" border="0" /></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end Tool -->
+                    <!-- start Tool Body -->
+                    <div class="portletMainWrap">
+                        <iframe	name="Main7f5328eex44e8x4e3ex861ex3fa9b04d2332"
+                                   id="Main7f5328eex44e8x4e3ex861ex3fa9b04d2332"
+                                   title="Message Of The Day "
+                                   class ="portletMainIframe"
+                                   height="475"
+                                   width="100%"
+                                   frameborder="0"
+                                   marginwidth="0"
+                                   marginheight="0"
+                                   scrolling="auto"
+                                   src="https://t-square.gatech.edu/portal/tool/7f5328ee-44e8-4e3e-861e-3fa9b04d2332?panel=Main">
+                        </iframe>
+                    </div>
+                    <!-- end Tool Body -->
+                    <!-- start Tool -->
+                    <div class="portletTitleWrap">
+                        <div class="portletTitle">
+                            <div class="title">
+                                <a href="https://t-square.gatech.edu/portal/tool-reset/e4b5e04c-0f5f-4227-8e67-558e5bc05490/?panel=Main" target="Maine4b5e04cx0f5fx4227x8e67x558e5bc05490" title="Reset">
+                                    <img src="/library/image/transparent.gif" alt="Reset" border="1" /></a>
+                                <h2>Calendar</h2>
+                            </div>
+                            <div class="action">
+                                <a href="https://t-square.gatech.edu/portal/help/main?help=sakai.summary.calendar" title="Help for Calendar"
+                                   target="_blank" onclick="openWindow('https://t-square.gatech.edu/portal/help/main?help=sakai.summary.calendar', 'Help',
+								  'resizable=yes,toolbar=no,scrollbars=yes,menubar=yes,width=800,height=600'); return false">
+                                    <img src="/library/image/transparent.gif"  alt="Help for Calendar" border="0" /></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end Tool -->
+                    <!-- start Tool Body -->
+                    <div class="portletMainWrap">
+                        <iframe	name="Maine4b5e04cx0f5fx4227x8e67x558e5bc05490"
+                                   id="Maine4b5e04cx0f5fx4227x8e67x558e5bc05490"
+                                   title="Calendar "
+                                   class ="portletMainIframe"
+                                   height="475"
+                                   width="100%"
+                                   frameborder="0"
+                                   marginwidth="0"
+                                   marginheight="0"
+                                   scrolling="auto"
+                                   src="https://t-square.gatech.edu/portal/tool/e4b5e04c-0f5f-4227-8e67-558e5bc05490?panel=Main">
+                        </iframe>
+                    </div>
+                    <!-- end Tool Body -->
+                </div>
+                <div id="col2of2">
+                    <!-- start include tool -->
+                    <!-- start Tool Col2 -->
+                    <div class="portletTitleWrap">
+                        <div class="portletTitle">
+                            <div class="title">
+                                <h2>Recent Announcements</h2>
+                            </div>
+                            <div class="action">
+                                <a href="https://t-square.gatech.edu/portal/help/main?help=sakai.announcements" title="Help for Recent Announcements"
+                                   target="_blank" onclick="openWindow('https://t-square.gatech.edu/portal/help/main?help=sakai.announcements', 'Help',
+								  'resizable=yes,toolbar=no,scrollbars=yes,menubar=yes,width=800,height=600'); return false">
+                                    <img src="/library/image/transparent.gif"  alt="Help for Recent Announcements"  border="0" /></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end Tool Col2 -->
+                    <!-- start Tool Body -->
+                    <div class="portletMainWrap">
+                        <iframe	name="Main3f02a158xafb6x4b9fxb3aexe4f51cb681b4"
+                                   id="Main3f02a158xafb6x4b9fxb3aexe4f51cb681b4"
+                                   title="Recent Announcements "
+                                   class ="portletMainIframe"
+                                   height="475"
+                                   width="100%"
+                                   frameborder="0"
+                                   marginwidth="0"
+                                   marginheight="0"
+                                   scrolling="auto"
+                                   src="https://t-square.gatech.edu/portal/tool/3f02a158-afb6-4b9f-b3ae-e4f51cb681b4?panel=Main">
+                        </iframe>
+                    </div>
+                    <!-- end Tool Body -->
+                    <!-- end include tool -->
+                </div>
+            </div>
+            <div>
+                <!-- include bottom -->
+                <div id="footer">
+                    <div class="footerExtNav">
+                        <ul id="footerLinks"><li><span><a href="/portal/pda">Mobile View</a></span></li><li><span><a href="http://info.t-square.gatech.edu/" target="_blank">Help and Information Site</a></span></li><li><span><a href="http://www.sakaiproject.org/" target="_blank">The Sakai Project</a></span></li></ul>
+                    </div>
+                    <div id="footerInfo">
+                        <a href="http://sakaiproject.org" target="_blank">
+                            <img border="0" src="/library/image/sakai_powered.gif" alt="Powered by Sakai" />
+                            <span class="skip"> (Opens in a new window)</span>
+                        </a>
+                        <!-- end include Bottom -->
+                    </div>
+                    <div class="sakaiCopyrightInfo">Copyright 2003-2011 The Sakai Foundation. All rights reserved. Portions of Sakai are copyrighted by other parties as described in the Acknowledgments screen.<br />
+                        T-Square - gatech-sakai-2-8-x-10 - Sakai 2.8.x (Kernel 1.2.5)- Server pinch3.lms.gatech.edu
+                    </div>
+                </div>
+            </div>
+            <!-- end includePageBody -->
+            <!-- END from includePageBody.vm -->
+        </div>
+        <!-- END from includePageWithNav.vm -->
+
+    </div>
+</div>
+<!-- end includeSiteNav -->
+<!-- end site.vm -->
+</body>
+</html>

@@ -75,7 +75,10 @@ public class Parser {
                             Element tr = trs.get(i);
                             Elements tds = tr.select("td:not(:first-child)");
                             for (Element td : tds) {
-                                data.put(i + ":" + td.attr("headers"), td.text());
+                                String header = td.attr("headers");
+                                if (!header.isEmpty()) {
+                                    data.put(i + ":" + header, td.text());
+                                }
                             }
                         }
                         break;

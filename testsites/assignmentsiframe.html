@@ -1,0 +1,275 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <title>Assignments</title>
+    <link href="/library/skin/tool_base.css" type="text/css" rel="stylesheet" media="all" />
+    <link href="/library/skin/gatech/tool.css" type="text/css" rel="stylesheet" media="all" />
+    <script type="text/javascript" language="JavaScript" src="/library/js/headscripts.js"></script>
+    <script type="text/javascript" language="JavaScript">var sakai = sakai || {}; sakai.editor = sakai.editor || {};  sakai.locale = sakai.locale || {};
+    sakai.locale.userCountry = 'US';
+    sakai.locale.userLanguage = 'en';
+    sakai.locale.userLocale = 'en_US';
+    sakai.editor.collectionId = '/group/gtc-7fb4-a11e-5400-afa0-73ee2b759a03/';
+    sakai.editor.enableResourceSearch = false;</script>
+    <script type="text/javascript" language="JavaScript"></script>
+    <script type="text/javascript" language="JavaScript" src="/library/editor/FCKeditor/fckeditor.js"></script>
+    <script type="text/javascript" language="JavaScript" src="/library/editor/fckeditor.launch.js"></script>
+
+
+
+
+</head>
+<body  onload="setMainFrameHeight('Mainb9e3097dx8efcx48f1x9f44x3a05cc992b2e');setFocus(focus_path);"  >
+<!-- $Id$ -->
+<!-- start: chef_assignments_list_assignments.vm  -->
+<script type="text/javascript" language="JavaScript">
+    focus_path = ["search"];
+</script>
+<script type='text/javascript'>
+    var linkFlag = true;
+
+    function allowClick(object)
+    {
+        object.onclick='';
+        object.style.color='#000';
+        var rv = linkFlag;
+        linkFlag = false;
+        return rv;
+    }
+</script>
+<div class="portletBody">
+    <h3>
+        Assignment List
+    </h3>
+    <div class="navPanel">
+        <div class="viewNav" style="width:50%">
+            <div class="instruction">Select an assignment to view details, start working or edit your previous work.</div>
+        </div>
+        <div class="listNav">
+            <div  class="instruction">
+                Viewing 1 - 8 of 8 items
+            </div>
+            <form name="firstpageForm" class="inlineForm" method="post" action="https://t-square.gatech.edu/portal/tool/b9e3097d-8efc-48f1-9f44-3a05cc992b2e?panel=Main">
+                <fieldset><legend>First</legend><input type="submit" name="eventSubmit_doList_first" value="|&lt;" disabled="disabled" /></fieldset>
+            </form>
+            <form name="prevpageForm" class="inlineForm" method="post" action="https://t-square.gatech.edu/portal/tool/b9e3097d-8efc-48f1-9f44-3a05cc992b2e?panel=Main">
+                <fieldset><legend>Previous 200</legend><input type="submit" name="eventSubmit_doList_prev" value="&lt;" disabled="disabled" /></fieldset>
+            </form>
+            <form name="pagesizeForm" class="inlineForm" method="post" action="https://t-square.gatech.edu/portal/tool/b9e3097d-8efc-48f1-9f44-3a05cc992b2e?panel=Main">
+                <input type="hidden" name="eventSubmit_doChange_pagesize" value="changepagesize" />
+                <label for="selectPageSize" class="skip">Press Enter, then use alt + up and down arrows to scroll through menu</label>
+                <select id="selectPageSize" name="selectPageSize" onchange="document.pagesizeForm.submit();">
+                    <option value="5" >Show 5 items...</option>
+                    <option value="10" >Show 10 items...</option>
+                    <option value="20" >Show 20 items...</option>
+                    <option value="50" >Show 50 items...</option>
+                    <option value="100" >Show 100 items...</option>
+                    <option value="200"  selected="selected" >Show 200 items...</option>
+                </select>
+            </form>
+            <form name="nextpageForm" class="inlineForm" method="post" action="https://t-square.gatech.edu/portal/tool/b9e3097d-8efc-48f1-9f44-3a05cc992b2e?panel=Main">
+                <fieldset><legend>Next 200</legend><input type="submit" name="eventSubmit_doList_next" value="&gt;" disabled="disabled" /></fieldset>
+            </form>
+            <form name="lastpageForm" class="inlineForm" method="post" action="https://t-square.gatech.edu/portal/tool/b9e3097d-8efc-48f1-9f44-3a05cc992b2e?panel=Main">
+                <fieldset><legend>Last</legend><input type="submit" name="eventSubmit_doList_last" value="&gt;|" disabled="disabled" /></fieldset>
+            </form>
+        </div>
+    </div>
+    <form name="listAssignmentsForm" action="https://t-square.gatech.edu/portal/tool/b9e3097d-8efc-48f1-9f44-3a05cc992b2e?panel=Main" method="post">
+        <input type="hidden" name="source" value="0" />
+        <table class="listHier lines nolines" border="0" cellspacing="0" summary="List of assignments. Column headers are also links which can be used to sort the table by that column. Column 1: Indicates if the assignment has attachments. Column 2: assignment title and links to edit, duplicate or grade(if allowed). Column 3: status. Column 4: opening date. Column 5: due date. The rest of the columns may or may not be present. Column 6: may have the number submitted and graded. Column 7: may have checkboxes to select and remove the assignment.">
+            <tr>
+                <th id="attachments" class="attach">
+                    &nbsp;
+                </th>
+                <th id="title">
+                    <a href="#" onclick="location='https://t-square.gatech.edu/portal/tool/b9e3097d-8efc-48f1-9f44-3a05cc992b2e?criteria=title&amp;panel=Main&amp;sakai_action=doSort'; return false;"   title="Sort by title">
+                        Assignment title
+                    </a>
+                </th>
+                <th id="For">
+                    <a href="#" onclick="location='https://t-square.gatech.edu/portal/tool/b9e3097d-8efc-48f1-9f44-3a05cc992b2e?criteria=for&amp;panel=Main&amp;sakai_action=doSort'; return false;"   title="Sort by audience">For</a>
+                </th>
+                <th id="status">
+                    <a href="#" onclick="location='https://t-square.gatech.edu/portal/tool/b9e3097d-8efc-48f1-9f44-3a05cc992b2e?criteria=assignment_status&amp;panel=Main&amp;sakai_action=doSort'; return false;"   title="Sort by status">
+                        Status
+                    </a>
+                </th>
+                <th id="openDate">
+                    <a href="#" onclick="location='https://t-square.gatech.edu/portal/tool/b9e3097d-8efc-48f1-9f44-3a05cc992b2e?criteria=opendate&amp;panel=Main&amp;sakai_action=doSort'; return false;"  title="Sort by section">
+                        Open
+                    </a>
+                </th>
+                <th id="dueDate">
+                    <a href="#" onclick="location='https://t-square.gatech.edu/portal/tool/b9e3097d-8efc-48f1-9f44-3a05cc992b2e?criteria=duedate&amp;panel=Main&amp;sakai_action=doSort'; return false;"  title="Sort by due date">
+                        Due
+                    </a>
+                </th>
+            </tr>
+            <tr>
+                <td headers="attachments" class="attach">
+                    <img id="attachment1" src="/library/image/sakai/attachments.gif?panel=Main" alt="Attachments" width="13" height="11" border="0" />
+                </td>
+                <td headers="title">
+                    <h4><a href="https://t-square.gatech.edu/portal/tool/b9e3097d-8efc-48f1-9f44-3a05cc992b2e?assignmentReference=/assignment/a/gtc-7fb4-a11e-5400-afa0-73ee2b759a03/87eeb8f1-8f54-46de-bd61-edd62e7689b7&amp;panel=Main&amp;sakai_action=doView_submission">Homework 08</a></h4>
+                </td>
+                <td  style="padding-bottom:0">
+                    site
+                </td>
+                <td headers="status">
+                    Not Started
+                </td>
+                <td headers="openDate">
+                    Mar 7, 2015 8:00 pm
+                </td>
+                <td headers="dueDate">
+                    Mar 13, 2015 12:00 pm
+                </td>
+            </tr>
+            <tr>
+                <td headers="attachments" class="attach">
+                    <img id="attachment2" src="/library/image/sakai/attachments.gif?panel=Main" alt="Attachments" width="13" height="11" border="0" />
+                </td>
+                <td headers="title">
+                    <h4><a href="https://t-square.gatech.edu/portal/tool/b9e3097d-8efc-48f1-9f44-3a05cc992b2e?assignmentReference=/assignment/a/gtc-7fb4-a11e-5400-afa0-73ee2b759a03/59f6d0b3-6f75-4988-bc62-17c3171a56c8&amp;panel=Main&amp;sakai_action=doView_submission">Homework 07</a></h4>
+                </td>
+                <td  style="padding-bottom:0">
+                    site
+                </td>
+                <td headers="status">
+                    Not Started
+                </td>
+                <td headers="openDate">
+                    Feb 28, 2015 9:30 pm
+                </td>
+                <td headers="dueDate">
+                    Mar 6, 2015 12:05 pm
+                </td>
+            </tr>
+            <tr>
+                <td headers="attachments" class="attach">
+                    <img id="attachment3" src="/library/image/sakai/attachments.gif?panel=Main" alt="Attachments" width="13" height="11" border="0" />
+                </td>
+                <td headers="title">
+                    <h4><a href="https://t-square.gatech.edu/portal/tool/b9e3097d-8efc-48f1-9f44-3a05cc992b2e?assignmentReference=/assignment/a/gtc-7fb4-a11e-5400-afa0-73ee2b759a03/c53894c9-7888-4c5d-a91e-ddfeb592acc7&amp;panel=Main&amp;sakai_action=doView_submission">Homework 06</a></h4>
+                </td>
+                <td  style="padding-bottom:0">
+                    site
+                </td>
+                <td headers="status">
+                    Not Started
+                </td>
+                <td headers="openDate">
+                    Feb 14, 2015 2:50 pm
+                </td>
+                <td headers="dueDate">
+                    Feb 20, 2015 12:05 pm
+                </td>
+            </tr>
+            <tr>
+                <td headers="attachments" class="attach">
+                    <img id="attachment4" src="/library/image/sakai/attachments.gif?panel=Main" alt="Attachments" width="13" height="11" border="0" />
+                </td>
+                <td headers="title">
+                    <h4><a href="https://t-square.gatech.edu/portal/tool/b9e3097d-8efc-48f1-9f44-3a05cc992b2e?assignmentReference=/assignment/a/gtc-7fb4-a11e-5400-afa0-73ee2b759a03/ecb27083-3f8e-4469-b7d5-f816cdcae3bc&amp;panel=Main&amp;sakai_action=doView_submission">Homework 05</a></h4>
+                </td>
+                <td  style="padding-bottom:0">
+                    site
+                </td>
+                <td headers="status">
+                    Not Started
+                </td>
+                <td headers="openDate">
+                    Feb 6, 2015 5:00 pm
+                </td>
+                <td headers="dueDate">
+                    Feb 13, 2015 12:05 pm
+                </td>
+            </tr>
+            <tr>
+                <td headers="attachments" class="attach">
+                    <img id="attachment5" src="/library/image/sakai/attachments.gif?panel=Main" alt="Attachments" width="13" height="11" border="0" />
+                </td>
+                <td headers="title">
+                    <h4><a href="https://t-square.gatech.edu/portal/tool/b9e3097d-8efc-48f1-9f44-3a05cc992b2e?assignmentReference=/assignment/a/gtc-7fb4-a11e-5400-afa0-73ee2b759a03/7869fc17-0b7d-41e8-a8f4-a5e1732c7bb9&amp;panel=Main&amp;sakai_action=doView_submission">Homework 04</a></h4>
+                </td>
+                <td  style="padding-bottom:0">
+                    site
+                </td>
+                <td headers="status">
+                    Not Started
+                </td>
+                <td headers="openDate">
+                    Feb 2, 2015 3:00 pm
+                </td>
+                <td headers="dueDate">
+                    Feb 6, 2015 5:00 pm
+                </td>
+            </tr>
+            <tr>
+                <td headers="attachments" class="attach">
+                    <img id="attachment6" src="/library/image/sakai/attachments.gif?panel=Main" alt="Attachments" width="13" height="11" border="0" />
+                </td>
+                <td headers="title">
+                    <h4><a href="https://t-square.gatech.edu/portal/tool/b9e3097d-8efc-48f1-9f44-3a05cc992b2e?assignmentReference=/assignment/a/gtc-7fb4-a11e-5400-afa0-73ee2b759a03/fc645759-0ffe-4b82-9458-c6f04ef8751b&amp;panel=Main&amp;sakai_action=doView_submission">Homework 03</a></h4>
+                </td>
+                <td  style="padding-bottom:0">
+                    site
+                </td>
+                <td headers="status">
+                    Not Started
+                </td>
+                <td headers="openDate">
+                    Jan 23, 2015 6:00 pm
+                </td>
+                <td headers="dueDate">
+                    Jan 30, 2015 12:05 pm
+                </td>
+            </tr>
+            <tr>
+                <td headers="attachments" class="attach">
+                    <img id="attachment7" src="/library/image/sakai/attachments.gif?panel=Main" alt="Attachments" width="13" height="11" border="0" />
+                </td>
+                <td headers="title">
+                    <h4><a href="https://t-square.gatech.edu/portal/tool/b9e3097d-8efc-48f1-9f44-3a05cc992b2e?assignmentReference=/assignment/a/gtc-7fb4-a11e-5400-afa0-73ee2b759a03/5d0c18a2-45c3-454f-822a-542467c4e679&amp;panel=Main&amp;sakai_action=doView_submission">Homework 02 </a></h4>
+                </td>
+                <td  style="padding-bottom:0">
+                    site
+                </td>
+                <td headers="status">
+                    Not Started
+                </td>
+                <td headers="openDate">
+                    Jan 16, 2015 12:00 pm
+                </td>
+                <td headers="dueDate">
+                    Jan 23, 2015 12:00 pm
+                </td>
+            </tr>
+            <tr>
+                <td headers="attachments" class="attach">
+                    <img id="attachment8" src="/library/image/sakai/attachments.gif?panel=Main" alt="Attachments" width="13" height="11" border="0" />
+                </td>
+                <td headers="title">
+                    <h4><a href="https://t-square.gatech.edu/portal/tool/b9e3097d-8efc-48f1-9f44-3a05cc992b2e?assignmentReference=/assignment/a/gtc-7fb4-a11e-5400-afa0-73ee2b759a03/046e47b7-6ad2-4a2f-ae1c-b11b39f999fd&amp;panel=Main&amp;sakai_action=doView_submission">Homework 01</a></h4>
+                </td>
+                <td  style="padding-bottom:0">
+                    site
+                </td>
+                <td headers="status">
+                    Not Started
+                </td>
+                <td headers="openDate">
+                    Jan 9, 2015 7:00 am
+                </td>
+                <td headers="dueDate">
+                    Jan 16, 2015 12:00 pm
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+<!-- end: chef_assignments_list_assignments.vm  --></body></html>
