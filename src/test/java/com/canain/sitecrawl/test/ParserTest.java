@@ -19,7 +19,7 @@ import java.util.Map;
  *
  * @author Shuyang Chen
  */
-public class Main {
+public class ParserTest {
 
     private Parser parser;
 
