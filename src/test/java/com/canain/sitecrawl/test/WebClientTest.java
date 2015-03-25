@@ -6,6 +6,7 @@ import com.google.common.base.Charsets;
 import com.google.common.io.Files;
 import org.junit.Before;
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import java.io.File;
@@ -28,26 +29,29 @@ public class WebClientTest {
         client.authTsquare(authData[0], authData[1]);
     }
 
-//    @Test
-//    public void testTsquareNav() throws IOException {
-//        Map<String, String> data = client.getParser("https://t-square.gatech.edu/portal", SiteType.TSQUARE).getData(SiteType.Tsquare.NAV);
-//        System.out.println(data);
-//    }
+    @Ignore
+    @Test
+    public void testTsquareNav() throws IOException {
+        Map<String, String> data = client.getParser("https://t-square.gatech.edu/portal", SiteType.TSQUARE).getData(SiteType.Tsquare.NAV);
+        System.out.println(data);
+    }
 
-//    @Test
-//     public void testTsquareSingleSide() throws IOException {
-//        Map<String, String> data = client.getParser("https://t-square.gatech.edu/portal", SiteType.TSQUARE).getData(SiteType.Tsquare.NAV);
-//        data = client.getParser((String)data.values().toArray()[1], SiteType.TSQUARE).getData(SiteType.Tsquare.SIDE); //gets first class and not My Workspace
-//        System.out.println(data);
-//    }
+    @Ignore
+    @Test
+     public void testTsquareSingleSide() throws IOException {
+        Map<String, String> data = client.getParser("https://t-square.gatech.edu/portal", SiteType.TSQUARE).getData(SiteType.Tsquare.NAV);
+        data = client.getParser((String)data.values().toArray()[1], SiteType.TSQUARE).getData(SiteType.Tsquare.SIDE); //gets first class and not My Workspace
+        System.out.println(data);
+    }
 
-//    @Test
-//    public void testTsquareSingleAssignmentsIframe() throws IOException {
-//        Map<String, String> data = client.getParser("https://t-square.gatech.edu/portal", SiteType.TSQUARE).getData(SiteType.Tsquare.NAV);
-//        data = client.getParser((String)data.values().toArray()[1], SiteType.TSQUARE).getData(SiteType.Tsquare.SIDE); //gets first class and not My Workspace
-//        data = client.getParser(data.get("Assignments"), SiteType.TSQUARE).getData(SiteType.Tsquare.ASSIGNMENTS_IFRAME);
-//        System.out.println(data);
-//    }
+    @Ignore
+    @Test
+    public void testTsquareSingleAssignmentsIframe() throws IOException {
+        Map<String, String> data = client.getParser("https://t-square.gatech.edu/portal", SiteType.TSQUARE).getData(SiteType.Tsquare.NAV);
+        data = client.getParser((String)data.values().toArray()[1], SiteType.TSQUARE).getData(SiteType.Tsquare.SIDE); //gets first class and not My Workspace
+        data = client.getParser(data.get("Assignments"), SiteType.TSQUARE).getData(SiteType.Tsquare.ASSIGNMENTS_IFRAME);
+        System.out.println(data);
+    }
 
     @Test
     public void testTsquareSingleAssignments() throws IOException {

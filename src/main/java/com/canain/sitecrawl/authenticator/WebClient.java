@@ -35,8 +35,7 @@ public class WebClient {
      * _eventId - submit
      * submit - LOGIN
      */
-    private Map<String, String> authTsquareCookies(String user, String pass) throws IOException {
-
+    public Document authTsquare(String user, String pass) throws IOException {
         Connection.Response response = Jsoup.connect(TSQUARE_AUTH_URL).execute();
         cookies.putAll(response.cookies());
 
@@ -51,13 +50,9 @@ public class WebClient {
                 .method(Connection.Method.POST)
                 .execute();
 
-        // System.out.println(response.parse().toString());
+        cookies.putAll(response.cookies());
 
-        return response.cookies();
-    }
-
-    public void authTsquare(String user, String pass) throws IOException {
-        cookies.putAll(authTsquareCookies(user, pass));
+        return response.parse();
     }
 
     public Document getDocument(String url) throws IOException {
