@@ -125,7 +125,7 @@ public class OfflineParserTest {
     }
 
     @Test
-    public void testAuth() throws IOException {
+    public void testTsquareAuth() throws IOException {
         parser = new Parser(Jsoup.parse(new File("testsites/tsquare/auth.html"), "UTF-8"), SiteType.TSQUARE);
 
         Map<String, String> data = new LinkedHashMap<String, String>();

@@ -14,8 +14,8 @@ public class SiteType {
     public static class Tsquare {
         public static final int NAV = 0;
         public static final int SIDE = 1;
-        public static final int ASSIGNMENTS_IFRAME = 2;
-        public static final int ASSIGNMENTS = 3;
+        public static final int ASSIGNMENTS_IFRAME = 2; // returns assignment iframe
+        public static final int ASSIGNMENTS = 3; // returns assignments table data
         public static final int AUTH = 4;
     }
 }

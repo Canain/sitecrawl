@@ -64,4 +64,8 @@ public class WebClient {
         return Jsoup.connect(url).cookies(cookies).execute().parse();
     }
 
+    public Parser getParser(String url, int siteType) throws IOException {
+        return new Parser(getDocument(url), siteType);
+    }
+
 }
