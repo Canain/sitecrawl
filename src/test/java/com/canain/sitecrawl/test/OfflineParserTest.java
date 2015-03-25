@@ -19,7 +19,7 @@ import java.util.Map;
  *
  * @author Shuyang Chen
  */
-public class ParserTest {
+public class OfflineParserTest {
 
     private Parser parser;
 

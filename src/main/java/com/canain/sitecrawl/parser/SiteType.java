@@ -16,5 +16,6 @@ public class SiteType {
         public static final int SIDE = 1;
         public static final int ASSIGNMENTS_IFRAME = 2;
         public static final int ASSIGNMENTS = 3;
+        public static final int AUTH = 4;
     }
 }

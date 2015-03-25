@@ -82,6 +82,10 @@ public class Parser {
                             }
                         }
                         break;
+                    case SiteType.Tsquare.AUTH:
+                        data.put("lt", doc.select("input[name=lt]").attr("value"));
+                        data.put("execution", doc.select("input[name=execution]").attr("value"));
+                        break;
                     default:
                         break;
                 }
