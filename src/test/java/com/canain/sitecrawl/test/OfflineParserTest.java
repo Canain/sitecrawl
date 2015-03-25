@@ -30,7 +30,7 @@ public class OfflineParserTest {
 
     @Test
     public void testOfflineTsquareNav() throws IOException {
-        parser = new Parser(Jsoup.parse(new File("testsites/workspace.html"), "UTF-8"), SiteType.TSQUARE);
+        parser = new Parser(Jsoup.parse(new File("testsites/tsquare/workspace.html"), "UTF-8"), SiteType.TSQUARE);
 
         Map<String, String> data = new LinkedHashMap<String, String>();
         data.put("My Workspace", "#");
@@ -45,7 +45,7 @@ public class OfflineParserTest {
 
     @Test
     public void testOfflineTsquareSide() throws IOException {
-        parser = new Parser(Jsoup.parse(new File("testsites/class.html"), "UTF-8"), SiteType.TSQUARE);
+        parser = new Parser(Jsoup.parse(new File("testsites/tsquare/class.html"), "UTF-8"), SiteType.TSQUARE);
 
         Map<String, String> data = new LinkedHashMap<String, String>();
         data.put("Home", "");
@@ -68,7 +68,7 @@ public class OfflineParserTest {
 
     @Test
     public void testOfflineTsquareAssignmentsIframe() throws IOException {
-        parser = new Parser(Jsoup.parse(new File("testsites/assignments.html"), "UTF-8"), SiteType.TSQUARE);
+        parser = new Parser(Jsoup.parse(new File("testsites/tsquare/assignments.html"), "UTF-8"), SiteType.TSQUARE);
 
         Map<String, String> data = new LinkedHashMap<String, String>();
         data.put("iframe", "https://t-square.gatech.edu/portal/tool/77bf4947-7b37-4ab9-8046-3df006928a95?panel=Main");
@@ -78,7 +78,7 @@ public class OfflineParserTest {
 
     @Test
     public void testOfflineTsquareAssignments() throws IOException {
-        parser = new Parser(Jsoup.parse(new File("testsites/assignmentsiframe.html"), "UTF-8"), SiteType.TSQUARE);
+        parser = new Parser(Jsoup.parse(new File("testsites/tsquare/assignmentsiframe.html"), "UTF-8"), SiteType.TSQUARE);
 
         Map<String, String> data = new LinkedHashMap<String, String>();
         data.put("0:title", "Homework 08");
@@ -122,5 +122,17 @@ public class OfflineParserTest {
         data.put("7:dueDate", "Jan 16, 2015 12:00 pm");
 
         assertEquals(data, parser.getData(SiteType.Tsquare.ASSIGNMENTS));
+    }
+
+    @Test
+    public void testAuth() throws IOException {
+        parser = new Parser(Jsoup.parse(new File("testsites/tsquare/auth.html"), "UTF-8"), SiteType.TSQUARE);
+
+        Map<String, String> data = new LinkedHashMap<String, String>();
+
+        data.put("lt", "LT-1198121-gBgHrHNEgl00yiXfeS9dr0wOx4NuCD");
+        data.put("execution", "e2s1");
+
+        assertEquals(data, parser.getData(SiteType.Tsquare.AUTH));
     }
 }
