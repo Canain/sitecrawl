@@ -54,7 +54,7 @@ public class Parser {
             case SiteType.TSQUARE:
                 switch(type) {
                     case SiteType.Tsquare.NAV:
-                        Elements navs = doc.select("#siteLinkList li a");
+                        Elements navs = doc.select("#siteLinkList li:not(:first-child) a");
                         for (Element nav : navs) {
                             data.put(nav.text(), nav.attr("href"));
                         }
@@ -70,6 +70,9 @@ public class Parser {
                         data.put("iframe", iframe.attr("src"));
                         break;
                     case SiteType.Tsquare.ASSIGNMENTS:
+                        if (doc.select(".instruction").first().text().contains("There are currently no assignments at this location")) {
+                            break;
+                        }
                         Elements trs = doc.select("form[name=listAssignmentsForm] tr:not(:first-child)");
                         for (int i = 0; i < trs.size(); i++) {
                             Element tr = trs.get(i);

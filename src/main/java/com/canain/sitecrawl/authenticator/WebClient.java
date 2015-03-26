@@ -55,12 +55,20 @@ public class WebClient {
         return response.parse();
     }
 
+    public Document getDocument(String url, int timeout) throws IOException {
+        return Jsoup.connect(url).cookies(cookies).timeout(timeout).execute().parse();
+    }
+
     public Document getDocument(String url) throws IOException {
-        return Jsoup.connect(url).cookies(cookies).timeout(10000).execute().parse();
+        return getDocument(url, 3000);
     }
 
     public Parser getParser(String url, int siteType) throws IOException {
         return new Parser(getDocument(url), siteType);
+    }
+
+    public Parser getParser(String url, int siteType, int timeout) throws IOException {
+        return new Parser(getDocument(url, timeout), siteType);
     }
 
 }

@@ -33,7 +33,6 @@ public class OfflineParserTest {
         parser = new Parser(Jsoup.parse(new File("testsites/tsquare/workspace.html"), "UTF-8"), SiteType.TSQUARE);
 
         Map<String, String> data = new LinkedHashMap<String, String>();
-        data.put("My Workspace", "#");
         data.put("CS-2110", "https://t-square.gatech.edu/portal/site/gtc-8603-513f-59e2-86ed-64fd10a878e1");
         data.put("CS-2340-A,GR", "https://t-square.gatech.edu/portal/site/gtc-878c-f073-5abc-a837-fc1051446535");
         data.put("PHYS-2211-K,M,N", "https://t-square.gatech.edu/portal/site/gtc-3d62-f0de-52de-8aec-e11a87b512fe");
