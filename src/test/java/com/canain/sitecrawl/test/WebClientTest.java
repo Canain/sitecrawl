@@ -11,6 +11,9 @@ import org.junit.Test;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Map;
 
 /**
@@ -54,12 +57,43 @@ public class WebClientTest {
     }
 
     @Test
-    public void testTsquareSingleAssignments() throws IOException {
+    public void testTsquareSingleAssignments() throws IOException, ParseException {
+        long startTime = System.currentTimeMillis();
+
         Map<String, String> data = client.getParser("https://t-square.gatech.edu/portal", SiteType.TSQUARE).getData(SiteType.Tsquare.NAV);
         data = client.getParser((String)data.values().toArray()[1], SiteType.TSQUARE).getData(SiteType.Tsquare.SIDE); //gets first class and not My Workspace
         data = client.getParser(data.get("Assignments"), SiteType.TSQUARE).getData(SiteType.Tsquare.ASSIGNMENTS_IFRAME);
         data = client.getParser(data.get("iframe"), SiteType.TSQUARE).getData(SiteType.Tsquare.ASSIGNMENTS);
-        System.out.println(data);
+
+        System.out.println("Took " + (System.currentTimeMillis() - startTime) + " ms to retrieve assignments from Tsquare");
+
+        int maxValue = 0;
+        int value;
+        for (String key : data.keySet()) {
+            value = Integer.parseInt(key.split(":")[0]);
+            if (value > maxValue) {
+                maxValue = value;
+            }
+        }
+
+        // Feb 9, 2015 3:00 pm
+        SimpleDateFormat sdf = new SimpleDateFormat("MMM d, yyyy h:mm a");
+
+        System.out.println("Title|Status|Open Date|Due Date");
+        System.out.println(":--|:--|:--|:--");
+        String dueDate;
+        long currentTime = (new Date()).getTime();
+        for (int i = 0; i <= maxValue; i++) {
+            dueDate = data.get(i + ":dueDate");
+            if (sdf.parse(dueDate).getTime() > currentTime) {
+                System.out.print(data.get(i + ":title") + "|");
+                System.out.print(data.get(i + ":status") + "|");
+                System.out.print(data.get(i + ":openDate") + "|");
+                System.out.println(dueDate);
+            }
+        }
+
+//        System.out.println(data);
     }
 
 }

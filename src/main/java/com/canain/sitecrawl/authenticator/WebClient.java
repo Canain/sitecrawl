@@ -56,7 +56,7 @@ public class WebClient {
     }
 
     public Document getDocument(String url) throws IOException {
-        return Jsoup.connect(url).cookies(cookies).execute().parse();
+        return Jsoup.connect(url).cookies(cookies).timeout(10000).execute().parse();
     }
 
     public Parser getParser(String url, int siteType) throws IOException {
