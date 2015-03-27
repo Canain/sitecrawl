@@ -160,11 +160,11 @@ public class TsquareCrawler {
                 dueDate = navAssignments.get(i + ":dueDate");
                 try {
                     if (sdf.parse(dueDate).getTime() > currentTime) {
-                        sb.append(clas + "|");
-                        sb.append(navAssignments.get(i + ":title") + "|");
-                        sb.append(navAssignments.get(i + ":status") + "|");
-                        sb.append(navAssignments.get(i + ":openDate") + "|");
-                        sb.append(dueDate + "\n");
+                        sb.append(clas).append("|");
+                        sb.append(navAssignments.get(i + ":title")).append("|");
+                        sb.append(navAssignments.get(i + ":status")).append("|");
+                        sb.append(navAssignments.get(i + ":openDate")).append("|");
+                        sb.append(dueDate).append("\n");
                     }
                 } catch (ParseException e) {
                     e.printStackTrace();
