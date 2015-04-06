@@ -28,10 +28,6 @@ public class Parser {
         this(doc, SiteType.UNKNOWN);
     }
 
-    public static Parser parse(String url) throws IOException {
-        return new Parser(Jsoup.connect(url).get());
-    }
-
     public String getText(String selector) {
         return doc.select(selector).text();
     }
